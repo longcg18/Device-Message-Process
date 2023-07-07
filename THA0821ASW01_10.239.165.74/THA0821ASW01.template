@@ -1,0 +1,15 @@
+Value PortNumber (\d+)
+Value Active (\w+)
+Value Name (\w+)
+Value PVID (\d+)
+Value FlowControl (\w+)
+Value Type (\S+)
+Value SpeedandDuplex (\S+)
+
+Start
+ ^  Port No       :${PortNumber}
+    Active      :${Active}
+    Name        :${Name}
+    PVID        :${PVID}              Flow Control    :${FlowControl}
+    Type        :${Type}           Speed/Duplex    :${SpeedandDuplex}
+    802.1p Priority :\S+ -> Record

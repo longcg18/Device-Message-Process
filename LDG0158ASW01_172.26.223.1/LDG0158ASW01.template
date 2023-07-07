@@ -1,0 +1,9 @@
+Value PortNumber (\d+)
+Value AdminState (\w+)
+Value Operate (\S+)
+Value Speed (\S+)
+Value Duplex (\S+)
+Value Status (\w+)
+
+Start
+ ^${PortNumber}\s+${AdminState}\s+${Operate}\s+${Speed}\/${Duplex}\s+\S+\s+\S+\s+${Status} -> Status
