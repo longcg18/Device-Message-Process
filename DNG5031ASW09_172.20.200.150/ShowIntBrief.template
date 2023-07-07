@@ -1,0 +1,9 @@
+Value Int (\S+)
+Value Bandwith (\d+)
+Value AdminState (\w+)
+Value PhysicalState (\w+)
+Value ProtocolState (\w+)
+Value Description (\S+)
+
+Start 
+ ^${Int}\s+\S+\s+\S+\s+${Bandwith}\s+${AdminState}\s+${PhysicalState}\s+${ProtocolState}\s+${Description} -> Record

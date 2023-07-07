@@ -1,0 +1,556 @@
+@@BLOCK--
+VTU0009ASW01#show interface description
+Interface     AdminStatus  PhyStatus  Protocol  Description
+gei_1/1       up           up         up        VTU0009AR01_P_5
+gei_1/2       up           down       down      v064_ftth_linhltp
+gei_1/3       up           up         up        h004_o_tct_1477
+gei_1/4       down         down       down      none
+gei_1/5       down         down       down      none
+gei_1/6       up           up         up        v064_ftth_doicnvbtvt
+                                                q
+gei_1/7       up           down       down      none
+gei_1/8       up           up         up        v064_ftth_traittn1
+gei_1/9       up           down       down      v064_ow_brvta12
+gei_1/10      down         down       down      none
+gei_1/11      down         down       down      none
+gei_1/12      up           down       down      v064_ftth_doicnvbtvt
+                                                q
+gei_1/13      up           down       down      none
+gei_1/14      up           up         up        nhphattriencd
+gei_1/15      up           up         up        thptnguyendu_ftth_vt
+                                                u
+gei_1/16      down         down       down      none
+gei_1/17      up           down       down      v064_ftth_phuoclhl
+gei_1/18      up           up         up        v064_ow_noicnctchtvt
+                                                c
+gei_1/19      up           up         up        line_617208121
+gei_1/20      up           up         up        v064_ftth_ducttgdtxh
+                                                c
+gei_1/21      down         down       down      none
+gei_1/22      down         down       down      none
+gei_1/23      up           up         up        v064_ftth_dunghv7
+gei_1/24      up           down       down      v064_ftth_hungcttsp
+vlan1         up           up         up        none
+vlan51        up           up         up        none
+VTU0009ASW01#
+
+@@BLOCK--
+VTU0009ASW01#show  running-config | begin interface
+interface vlan 1
+  out_index 2
+  ip address dhcp
+!
+interface vlan 51
+  ip address 172.16.32.248 255.255.255.0
+  out_index 28
+!
+interface null1
+  out_index 1
+!
+interface gei_1/1
+  out_index 4
+  description VTU0009AR01_P_5
+  pppoe-plus policy keep
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35-36
+  switchport trunk vlan 51
+  switchport trunk vlan 2210
+  switchport trunk vlan 2452
+  switchport trunk vlan 2454
+  switchport trunk vlan 2502
+  switchport trunk vlan 3225
+  switchport trunk vlan 3837
+  protocol-packet-protect pppoe disable
+!
+interface gei_1/2
+  out_index 5
+  description v064_ftth_linhltp
+  no negotiation auto
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35
+  switchport trunk vlan 2502
+!
+interface gei_1/3
+  out_index 6
+  description h004_o_tct_1477
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport access vlan 2210
+  traffic-limit rate-limit 1200 bucket-size 1000 in
+  traffic-shape data-rate 1200 burst-size 1000
+!
+interface gei_1/4
+  out_index 7
+  shutdown
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+!
+interface gei_1/5
+  out_index 8
+  shutdown
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+!
+interface gei_1/6
+  out_index 9
+  description v064_ftth_doicnvbtvtq
+  no negotiation auto
+  optical-info monitor enable
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  protocol-protect peak-rate mode arp 100
+  protocol-protect average-rate mode arp 50
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35
+  switchport trunk vlan 2502
+!
+interface gei_1/7
+  out_index 10
+  no negotiation auto
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35-36
+!
+interface gei_1/8
+  out_index 11
+  description v064_ftth_traittn1
+  no negotiation auto
+  optical-info monitor enable
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  protocol-protect peak-rate mode arp 100
+  protocol-protect average-rate mode arp 50
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport access vlan 35
+!
+interface gei_1/9
+  out_index 12
+  description v064_ow_brvta12
+  no negotiation auto
+  optical-info monitor enable
+  speed 100
+  jumbo-frame enable
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  protocol-protect peak-rate mode arp 100
+  protocol-protect average-rate mode arp 50
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport access vlan 2452
+  switchport qinq customer
+  traffic-limit rate-limit 2400 bucket-size 1000 in
+  traffic-shape data-rate 2400 burst-size 1000
+!
+interface gei_1/10
+  out_index 13
+  shutdown
+!
+interface gei_1/11
+  out_index 14
+  shutdown
+!
+interface gei_1/12
+  out_index 15
+  description v064_ftth_doicnvbtvtq
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35
+  switchport trunk vlan 2502
+  traffic-limit rate-limit 2048 bucket-size 4096 in
+  traffic-shape data-rate 2048 burst-size 4096
+!
+interface gei_1/13
+  out_index 16
+!
+interface gei_1/14
+  out_index 17
+  description nhphattriencd
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport access vlan 35
+!
+interface gei_1/15
+  out_index 18
+  description thptnguyendu_ftth_vtu
+  no negotiation auto
+  optical-info monitor enable
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  protocol-protect peak-rate mode arp 100
+  protocol-protect average-rate mode arp 50
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport access vlan 35
+!
+interface gei_1/16
+  out_index 19
+  shutdown
+!
+interface gei_1/17
+  out_index 20
+  description v064_ftth_phuoclhl
+  no negotiation auto
+  switchport access vlan 35
+!
+interface gei_1/18
+  out_index 21
+  description v064_ow_noicnctchtvtc
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport access vlan 2454
+  traffic-limit rate-limit 12000 bucket-size 1000 in
+  traffic-shape data-rate 12000 burst-size 1000
+!
+interface gei_1/19
+  out_index 22
+  description line_617208121
+  no negotiation auto
+  optical-info monitor enable
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  protocol-protect peak-rate mode arp 100
+  protocol-protect average-rate mode arp 50
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+  switchport mode trunk
+  switchport trunk native vlan 1
+  switchport trunk vlan 35
+  switchport trunk vlan 2502
+!
+interface gei_1/20
+  out_index 23
+  description v064_ftth_ducttgdtxhc
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport access vlan 35
+!
+interface gei_1/21
+  out_index 24
+  shutdown
+  no negotiation auto
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+!
+interface gei_1/22
+  out_index 25
+  shutdown
+!
+interface gei_1/23
+  out_index 26
+  description v064_ftth_dunghv7
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport access vlan 35
+!
+interface gei_1/24
+  out_index 27
+  description v064_ftth_hungcttsp
+  no negotiation auto
+  speed 100
+  broadcast-limit 10
+  multicast-limit 10
+  unknowcast-limit 10
+  switchport access vlan 35
+!
+!
+vlan private-map session-id 1 isolate gei_1/3-24 promis gei_1/1
+!
+parity-intr enable
+!
+pppoe-plus enable
+  pppoe-plus tag-format manual %sysname@%iftype@%slot/%subslot/%port:%cvlan
+!
+ip route 0.0.0.0 0.0.0.0 172.16.32.254
+!
+ztp vlan 1
+!
+mac aging-time 600
+mac moving-priority alarm enable
+mac unknowsource-filter interface gei_1/2 enable
+mac limit-num interface gei_1/6 20
+mac unknowsource-filter interface gei_1/6 enable
+mac limit-num interface gei_1/7 20
+mac unknowsource-filter interface gei_1/7 enable
+mac limit-num interface gei_1/8 20
+mac unknowsource-filter interface gei_1/8 enable
+mac limit-num interface gei_1/9 20
+mac unknowsource-filter interface gei_1/9 enable
+mac limit-num interface gei_1/12 20
+mac unknowsource-filter interface gei_1/12 enable
+mac limit-num interface gei_1/14 20
+mac unknowsource-filter interface gei_1/14 enable
+mac limit-num interface gei_1/15 20
+mac unknowsource-filter interface gei_1/15 enable
+mac unknowsource-filter interface gei_1/17 enable
+mac limit-num interface gei_1/18 20
+mac unknowsource-filter interface gei_1/18 enable
+mac limit-num interface gei_1/19 20
+mac unknowsource-filter interface gei_1/19 enable
+mac limit-num interface gei_1/20 20
+mac unknowsource-filter interface gei_1/20 enable
+mac limit-num interface gei_1/21 20
+mac unknowsource-filter interface gei_1/21 enable
+mac limit-num interface gei_1/23 20
+mac unknowsource-filter interface gei_1/23 enable
+mac limit-num interface gei_1/24 20
+mac unknowsource-filter interface gei_1/24 enable
+mac moving-priority interface gei_1/1 2
+!
+acl standard number 1
+  rule 1 permit 10.205.35.0 0.0.0.63
+  rule 2 permit 10.205.33.176 0.0.0.15
+  rule 3 permit 10.207.59.190 0.0.0.0
+  rule 4 permit 10.60.232.112 0.0.0.15
+  rule 5 permit 10.60.232.128 0.0.0.63
+  rule 6 permit 10.74.225.96 0.0.0.31
+!
+acl standard number 20
+  rule 1 permit 10.205.33.176 0.0.0.15
+  rule 2 permit 10.205.35.0 0.0.0.63
+  rule 3 permit 10.207.59.190 0.0.0.0
+  rule 4 permit 10.255.58.32 0.0.0.7
+  rule 5 permit 10.255.58.48 0.0.0.7
+  rule 6 permit 10.255.59.171 0.0.0.0
+  rule 7 permit 10.255.59.32 0.0.0.31
+  rule 8 permit 10.255.59.96 0.0.0.31
+  rule 9 permit 10.40.17.0 0.0.0.15
+  rule 10 permit 10.41.6.64 0.0.0.31
+  rule 11 permit 10.58.137.120 0.0.0.7
+  rule 12 permit 10.58.137.42 0.0.0.0
+  rule 13 permit 10.58.137.48 0.0.0.7
+  rule 14 permit 10.58.137.56 0.0.0.7
+  rule 15 permit 10.58.137.83 0.0.0.0
+  rule 16 permit 10.58.65.130 0.0.0.1
+  rule 17 permit 10.58.65.137 0.0.0.0
+  rule 18 permit 10.58.65.152 0.0.0.0
+  rule 19 permit 10.58.65.160 0.0.0.31
+  rule 20 permit 10.58.71.141 0.0.0.0
+  rule 21 permit 10.58.71.149 0.0.0.0
+  rule 22 permit 10.60.129.120 0.0.0.7
+  rule 23 permit 10.60.129.72 0.0.0.7
+  rule 24 permit 10.60.232.112 0.0.0.15
+  rule 25 permit 10.60.232.128 0.0.0.63
+  rule 26 permit 10.60.5.24 0.0.0.0
+  rule 27 permit 10.60.5.44 0.0.0.3
+  rule 28 permit 10.60.60.88 0.0.0.0
+  rule 29 permit 10.60.7.12 0.0.0.1
+  rule 30 permit 10.60.7.128 0.0.0.127
+  rule 31 permit 10.60.96.218 0.0.0.1
+  rule 32 permit 10.60.97.0 0.0.0.7
+  rule 33 permit 10.60.97.148 0.0.0.0
+  rule 34 permit 10.60.97.40 0.0.0.7
+  rule 35 permit 10.60.97.96 0.0.0.31
+  rule 36 permit 10.73.225.213 0.0.0.0
+  rule 37 permit 10.73.66.63 0.0.0.0
+  rule 38 permit 10.74.224.1 0.0.0.0
+  rule 39 permit 10.74.225.49 0.0.0.0
+  rule 40 permit 10.74.225.66 0.0.0.0
+  rule 41 permit 10.74.225.96 0.0.0.31
+  rule 42 permit 192.168.131.50 0.0.0.0
+  rule 43 permit 192.168.176.111 0.0.0.0
+  rule 44 permit 192.168.176.42 0.0.0.1
+  rule 45 permit 192.168.176.48 0.0.0.0
+!
+protocol-packet-protect enable
+loop-detect reopen-time 10
+loop-detect protect-interface gei_1/2 enable
+loop-detect protect-interface gei_1/3 enable
+loop-detect protect-interface gei_1/4 enable
+loop-detect protect-interface gei_1/5 enable
+loop-detect protect-interface gei_1/6 enable
+loop-detect protect-interface gei_1/7 enable
+loop-detect protect-interface gei_1/8 enable
+loop-detect protect-interface gei_1/9 enable
+loop-detect protect-interface gei_1/10 enable
+loop-detect protect-interface gei_1/11 enable
+loop-detect protect-interface gei_1/12 enable
+loop-detect protect-interface gei_1/13 enable
+loop-detect protect-interface gei_1/14 enable
+loop-detect protect-interface gei_1/15 enable
+loop-detect protect-interface gei_1/16 enable
+loop-detect protect-interface gei_1/17 enable
+loop-detect protect-interface gei_1/18 enable
+loop-detect protect-interface gei_1/19 enable
+loop-detect protect-interface gei_1/20 enable
+loop-detect protect-interface gei_1/21 enable
+loop-detect protect-interface gei_1/22 enable
+loop-detect protect-interface gei_1/23 enable
+loop-detect protect-interface gei_1/24 enable
+loop-detect interface gei_1/2 enable
+loop-detect interface gei_1/6 enable
+loop-detect interface gei_1/7 enable
+loop-detect interface gei_1/8 enable
+loop-detect interface gei_1/9 enable
+loop-detect interface gei_1/12 enable
+loop-detect interface gei_1/14 enable
+loop-detect interface gei_1/15 enable
+loop-detect interface gei_1/17 enable
+loop-detect interface gei_1/18 enable
+loop-detect interface gei_1/19 enable
+loop-detect interface gei_1/20 enable
+loop-detect interface gei_1/21 enable
+loop-detect interface gei_1/23 enable
+loop-detect interface gei_1/24 enable
+!
+!
+!
+nas
+!
+!
+!
+version V4.08.24R2
+!
+hostname VTU0009ASW01
+!
+service password-encryption
+!
+username admin password encrypted 1cb438284c13737fc359750d76150ee66f87cff676f93c769f37295b1e0cbc04 privilege 15
+username telnet_username password encrypted 49f5e8b5a7e1588f21119524cd364feb51cff203d13bfd0612538999e4b63c41
+username dangnh password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username traitn password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username danhhm password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username mybv password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username quanpm password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username binhnv password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username trungdnm password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username yenltt password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username namtt password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username nhientn password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username yennd password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username liemvt password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username nims password encrypted 526ab2fe539861db214359445b6380daf608d2ef855a161074c61ff2d0eba1b1 privilege 15
+username nockv3 password encrypted 366389f1b1da09fbb77050eaa9e52745389ff6ea088bf087099c89c2c6a607ba privilege 15
+username khdn password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username iptv password encrypted f38d9018431e2a90eb4418185dd1606ad55672a35586e8f1366da9236c50d953 privilege 15
+username tms password encrypted 8786b3f3c4286f8dc57afc9526c98c31995f6b4234c7faf2ebd35c34d311af44 privilege 15
+username viettel password encrypted 241e50cbe9c819316c7e13e0f7f62b2f91dedb8a0f70560e3b8c079095519812 privilege 15
+!
+user-authentication-type tacacs+
+user-authorization-type tacacs+
+!
+
+!
+banner incoming @
+          ************************************************
+          Welcome to ZXR10 5928E-FI Switch of ZTE Corporation
+          ************************************************
+@
+!
+!
+!
+!
+snmp-server access-list 1
+snmp-server community ipms_access_kv3 view AllView ro
+snmp-server community VTU009_ACSW001_RW view AllView rw
+snmp-server view AllView internet included
+snmp-server view DefaultView system included
+snmp-server host 10.74.225.108 trap Version 2c ipms_access_kv3 udp-port 162
+snmp-server host 10.74.225.107 trap Version 2c ipms_access_kv3 udp-port 162
+snmp-server host 10.74.225.112 trap Version 2c ipms_access_kv3 udp-port 162
+snmp-server host 10.74.225.111 trap Version 2c ipms_access_kv3 udp-port 162
+snmp-server host 10.30.72.12 trap Version 2c private udp-port 161
+snmp-server host 203.113.131.5 trap Version 2c private udp-port 161
+snmp-server host 172.16.127.1 trap Version 2c private udp-port 161
+snmp-server host 203.113.188.41 trap Version 2c private udp-port 161
+snmp-server host 10.74.225.49 trap Version 2c private udp-port 161
+!
+!
+!
+protect
+tcp synflood-protect disable
+tcp synflood-protect defence 0 waittime 30 num 1
+tcp synflood-protect max-connect high 90 low 60
+tcp synflood-protect one-minute high 80 low 50
+!
+
+alarm cpuload-on
+syslog-server host 10.74.225.115 fport 514 lport 514 alarmlog level notifications cmdlog debugmsg
+syslog-server host 10.74.225.116 fport 514 lport 514 alarmlog level notifications cmdlog debugmsg
+agent-environment temperature
+agent-environment threshold middle-temperature 51 high-temperature 61
+agent-environment time 60
+extern-alarm 1 low-level
+extern-alarm 2 low-level
+extern-alarm 3 low-level
+extern-alarm time 60
+!
+environ
+memory-check-threshold high-grade 25 low-grade 10
+memory-check-interval 1
+memory-check-switch on
+!
+line console idle-timeout 15
+line telnet idle-timeout 15
+line telnet access-class 20
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+tacacs enable
+tacacs-client 172.16.32.248
+!
+tacacs-server host 10.73.224.130 key swKv3@123
+tacacs-server host 10.73.224.129 key swKv3@123
+tacacs-server host 10.73.66.63 key T@c@cs2022
+tacacs-server host 10.60.60.88 key T@c@cs2022
+!
+aaa group-server tacacs+ zte
+  server 10.73.66.63
+  server 10.60.60.88
+!
+!
+aaa authentication login default group zte local
+aaa authentication enable default group zte local
+aaa authorization exec default group zte local
+aaa authorization commands 15 default group zte
+aaa accounting commands 15 default stop-only group zte
+!
+!
+!
+!
+control-plane-security enable
+!
+!
+end
+VTU0009ASW01#
+@BLOCK--

@@ -1,0 +1,239 @@
+@@BLOCK--
+THA0821ASW01# show interfaces config 1-28
+  Port Configurations:
+
+
+  Port No       :1
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :2
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :3
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :4
+    Active      :Yes
+    Name        :t037_a_line_dinhbt1
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :5
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :6
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :7
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :8
+    Active      :Yes
+    Name        :t037_a_line_tuha
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :9
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :10
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :11
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :12
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :13
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :14
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :15
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :16
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :17
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :18
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :19
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :20
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :21
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :22
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :23
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :24
+    Active      :No
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :100M           Speed/Duplex    :100-full
+    802.1p Priority :0
+
+  Port No       :25
+    Active      :Yes
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :10/100/1000M   Speed/Duplex    :auto
+    802.1p Priority :0
+
+  Port No       :26
+    Active      :Yes
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :10/100/1000M   Speed/Duplex    :auto
+    802.1p Priority :0
+
+  Port No       :27
+    Active      :Yes
+    Name        :
+    PVID        :1              Flow Control    :No
+    Type        :10/100/1000M   Speed/Duplex    :auto
+    802.1p Priority :0
+
+  Port No       :28
+    Active      :Yes
+    Name        :UPLINK_THA0821SRT03
+    PVID        :1              Flow Control    :No
+    Type        :10/100/1000M   Speed/Duplex    :1000-full
+    802.1p Priority :0
+
+THA0821ASW01#
+
+@@BLOCK--
+
+THA0821ASW01# show interfaces 27
+  Port Info     Port NO.                :27
+                Link                    :Down
+                State                   :STOP
+                LACP                    :Disabled
+                TxPkts                  :0
+                RxPkts                  :0
+                Errors                  :0
+                Tx KBs/s                :0.0
+                Rx KBs/s                :0.0
+                Up Time                 :0:00:00
+  TX Packet     Unicast                 :0
+                Multicast               :0
+                Broadcast               :0
+                Pause                   :0
+  RX Packet     Unicast                 :0
+                Multicast               :0
+                Broadcast               :0
+                Pause                   :0
+  TX Collison   Single                  :0
+                Multiple                :0
+                Excessive               :0
+                Late                    :0
+  Error Packet  RX CRC                  :0
+  Distribution  64                      :0
+                65 to 127               :0
+                128 to 255              :0
+                256 to 511              :0
+                512 to 1023             :0
+                1024 to 1518            :0
+                Giant                   :0
+
+THA0821ASW01#
+@@BLOCK--

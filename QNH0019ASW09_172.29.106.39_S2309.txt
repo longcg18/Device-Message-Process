@@ -1,0 +1,114 @@
+@@BLOCK--
+<QNH0019ASW09>dis interface brief
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(dl): DLDP down
+(d): Dampening Suppressed
+InUti/OutUti: input utility/output utility
+Interface                   PHY   Protocol InUti OutUti   inErrors  outErrors
+Ethernet0/0/1               down  down        0%     0%          0          0
+Ethernet0/0/2               down  down        0%     0%          0          0
+Ethernet0/0/3               *down down        0%     0%          0          0
+Ethernet0/0/4               down  down        0%     0%          0          0
+Ethernet0/0/5               *down down        0%     0%          0          0
+Ethernet0/0/6               *down down        0%     0%          0          0
+Ethernet0/0/7               down  down        0%     0%          0          0
+Ethernet0/0/8               *down down        0%     0%          0          0
+Ethernet0/0/9               down  down        0%     0%          0          0
+Ethernet0/0/10              *down down        0%     0%          0          0
+Ethernet0/0/11              down  down        0%     0%          0          0
+Ethernet0/0/12              *down down        0%     0%          0          0
+Ethernet0/0/13              down  down        0%     0%          0          0
+Ethernet0/0/14              *down down        0%     0%          0          0
+Ethernet0/0/15              *down down        0%     0%          0          0
+Ethernet0/0/16              down  down        0%     0%          0          0
+Ethernet0/0/17              *down down        0%     0%          0          0
+Ethernet0/0/18              down  down        0%     0%          0          0
+Ethernet0/0/19              down  down        0%     0%          0          0
+Ethernet0/0/20              down  down        0%     0%          0          0
+Ethernet0/0/21              *down down        0%     0%          0          0
+Ethernet0/0/22              *down down        0%     0%          0          0
+Ethernet0/0/23              *down down        0%     0%          0          0
+Ethernet0/0/24              *down down        0%     0%          0          0
+GigabitEthernet0/0/1        *down down        0%     0%          0          0
+GigabitEthernet0/0/2        *down down        0%     0%          0          0
+GigabitEthernet0/0/3        down  down        0%     0%          0          0
+GigabitEthernet0/0/4        up    up       0.01%  0.01%          0          0
+NULL0                       up    up(s)       0%     0%          0          0
+Vlanif1                     up    down        --     --          0          0
+Vlanif73                    up    up          --     --          0          0
+Vlanif151                   down  down        --     --          0          0
+Vlanif1051                  up    up          --     --          0          0
+
+@@BLOCK--
+<QNH0019ASW09>display inter description
+PHY: Physical
+*down: administratively down
+^down: standby
+(l): loopback
+(s): spoofing
+(b): BFD down
+(e): ETHOAM down
+(d): Dampening Suppressed
+Interface                     PHY     Protocol Description
+Eth0/0/1                      down    down     line_616983625
+Eth0/0/2                      down    down     q033_ftth_huygv
+Eth0/0/3                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/3 Interface
+Eth0/0/4                      down    down     q033_ftth_tranttt1
+Eth0/0/5                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/5 Interface
+Eth0/0/6                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/6 Interface
+Eth0/0/7                      down    down     THS_1_q033_ftth_trunghv3
+Eth0/0/8                      *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/8 Interface
+Eth0/0/9                      down    down     q033_ftth_hongtt9
+Eth0/0/10                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/10 Interface
+Eth0/0/11                     down    down     q033_ftth_huctthcst1
+Eth0/0/12                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/12 Interface
+Eth0/0/13                     down    down     q033_ftth_lieuttttb6
+Eth0/0/14                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/14 Interface
+Eth0/0/15                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/15 Interface
+Eth0/0/16                     down    down     q033_mw_hoinhcsx13
+Eth0/0/17                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/17 Interface
+Eth0/0/18                     down    down     q033_ftth_lieupgdvdthb3
+Eth0/0/19                     down    down     IPTV_1_q033_ftth_phongld
+Eth0/0/20                     down    down     q033_ftth_sonpt5
+Eth0/0/21                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/21 Interface
+Eth0/0/22                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/22 Interface
+Eth0/0/23                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/23 Interface
+Eth0/0/24                     *down   down     HUAWEI, Quidway Series, Ethernet0
+                                               /0/24 Interface
+GE0/0/1                       *down   down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/1 Interface
+GE0/0/2                       *down   down     HUAWEI, Quidway Series, GigabitEt
+                                               hernet0/0/2 Interface
+GE0/0/3                       down    down     UPlink_to_QNH0019ASW02_0/1/2_link
+                                               2_MVR_vlan36
+GE0/0/4                       up      up       UPlink_to_QNH0019ASW05_0/1/1
+NULL0                         up      up(s)    HUAWEI, Quidway Series, NULL0 Int
+                                               erface
+Vlanif1                       up      down     HUAWEI, Quidway Series, Vlanif1 I
+                                               nterface
+Vlanif73                      up      up       HUAWEI, Quidway Series, Vlanif73
+                                               Interface
+Vlanif151                     down    down     HUAWEI, Quidway Series, Vlanif151
+                                                Interface
+Vlanif1051                    up      up       HUAWEI, Quidway Series, Vlanif105
+                                               1 Interface
+
+@@BLOCK--

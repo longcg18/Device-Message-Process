@@ -1,0 +1,30 @@
+@@BLOCK--
+HNI6314ASW02#show interface switchport brief
+ Interface        Status     Link  ActSpeed   ActDuplex  VSL      Type     Pvid  Desc
+ -----------------------------------------------------------------------------------------
+ gi0/1            Enabled    Up    1000       Full                Nni      2755  h004_mw_goncttmtvtcttcs1
+ gi0/2            Enabled    Down  Unknown    Unknown             Nni      2455  h004_ow_quanccnttvtkh12
+ gi0/3            Enabled    Down  Unknown    Unknown             Nni      2454  h004_ow_quanccnttvtkh3
+ gi0/4            Enabled    Down  Unknown    Unknown             Nni      2452  h004_ow_quanccnttvtkh2
+ gi0/5            Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/6            Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/7            Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/8            Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/9            Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/10           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/11           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/12           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/13           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/14           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/15           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/16           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/17           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/18           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/19           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/20           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/21           Enabled    Up    100        Full                Nni      2452  h004_ow_quanccnttvtkh3
+ gi0/22           Enabled    Up    100        Full                Nni      2454  h004_ow_quanccnttvtkh2
+ gi0/23           Enabled    Down  Unknown    Unknown             Nni      1
+ gi0/24           Enabled    Up    1000       Full                Nni      1     UPLINK_SRT_PORT9
+HNI6314ASW02#
+@@BLOCK--

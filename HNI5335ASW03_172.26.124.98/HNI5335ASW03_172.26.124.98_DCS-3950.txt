@@ -1,0 +1,34 @@
+@BLOCK--
+HNI5335ASW03#show interface ethernet status
+Codes: A-Down - administratively down, a - auto, f - force, G - Gigabit
+
+Interface  Link/Protocol  Speed   Duplex  Vlan   Type            Alias Name
+1/1        UP/UP          a-100M  a-FULL  trunk  FE              h004_ftth_hoanptt1
+1/2        DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_hoalh7
+1/3        DOWN/DOWN      auto    auto    35     FE              h004_ftth_dungntt5
+1/4        UP/UP          a-10M   a-FULL  trunk  FE              h004_ftth_namctttmqth1
+1/5        UP/UP          a-100M  a-FULL  trunk  FE              h004_ftth_nganptk1
+1/6        UP/UP          a-100M  a-FULL  trunk  FE              h004_ftth_hoalh7
+1/7        UP/UP          a-100M  a-FULL  35     FE              IPTV_1_h004_ftth_tamnt4
+1/8        DOWN/DOWN      auto    auto    35     FE              h004_ftth_haptt12
+1/9        DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_daidt2
+1/10       DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_dungltn
+1/11       DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_tuannt0
+1/12       DOWN/DOWN      auto    auto    trunk  FE              h004_a_line_haind3
+1/13       DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_gjgjh
+1/14       DOWN/DOWN      auto    auto    trunk  FE              h004_a_line_tiendd6
+1/15       DOWN/DOWN      auto    auto    35     FE              h004_ftth_jjk
+1/16       UP/UP          a-100M  a-FULL  35     FE              h004_ftth_akactcpnt4
+1/17       DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_tungdd10
+1/18       UP/UP          a-100M  a-FULL  trunk  FE              h004_a_line_phonght
+1/19       DOWN/DOWN      auto    auto    35     FE              h004_ftth_phuongntk6
+1/20       DOWN/DOWN      f-100M  f-full  35     FE              h004_ftth_hoangvt4
+1/21       UP/UP          a-100M  a-FULL  trunk  FE              h004_ftth_phuongtt13
+1/22       DOWN/DOWN      auto    auto    trunk  FE              h004_ftth_thaipdh1
+1/23       DOWN/DOWN      auto    auto    35     FE              h004_ftth_tungnt60
+1/24       DOWN/DOWN      auto    auto    35     FE              h004_ftth_cuongnm156
+1/25       UP/UP          a-1G    a-FULL  trunk  G-Combo:Fiber
+1/26       DOWN/DOWN      auto    auto    1      G-Combo
+HNI5335ASW03#
+
+@BLOCK--

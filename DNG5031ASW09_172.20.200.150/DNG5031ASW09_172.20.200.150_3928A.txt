@@ -1,0 +1,33 @@
+@@BLOCK--
+DNG5031ASW09#show interface brief
+Interface      portattribute  mode  BW(Mbits) Admin Phy   Prot  Description
+fei_1/1        optical    Duplex/full  100    up    up    up    d511_ftth_thutt2
+fei_1/2        optical    Duplex/full  100    up    up    up    IPTV_4_d511_ftth
+fei_1/3        optical    Duplex/full  100    up    up    up    IPTV_4_d511_ftth
+fei_1/4        optical    Duplex/full  100    up    up    up    IPTV_3_d511_ftth
+fei_1/5        optical    Duplex/full  100    up    up    up    IPTV_1_d511_ftth
+fei_1/6        optical    Duplex/full  100    up    up    up    d511_ftth_thuytt
+fei_1/7        optical    Duplex/full  100    up    up    up    d511_ftth_danglt
+fei_1/8        optical    Duplex/full  100    up    up    up    THS_1_d511_ftth_
+fei_1/9        optical    Duplex/full  100    up    up    up    d511_ftth_liienn
+fei_1/10       optical    Duplex/full  100    up    up    up    d511_ftth_hieunp
+fei_1/11       optical    Duplex/full  100    up    up    up    d511_ftth_thannv
+fei_1/12       optical    Duplex/full  100    up    up    up    d511_ftth_nghiap
+fei_1/13       optical    Duplex/full  100    up    up    up    THS_1_d511_ftth_
+fei_1/14       optical    Duplex/full  100    up    up    up    d511_ftth_phuocn
+fei_1/15       optical    Duplex/full  100    up    up    up    d511_ftth_thuann
+fei_1/16       optical    Duplex/full  100    up    up    up    d511_ftth_thihtk
+fei_1/17       optical    Duplex/full  100    down  down  down  none
+fei_1/18       optical    Duplex/full  100    up    up    up    IPTV_0_d511_ftth
+fei_1/19       optical    Duplex/full  100    up    up    up    IPTV_0_d511_ftth
+fei_1/20       optical    Duplex/full  100    up    up    up    IPTV_0_d511_ftth
+fei_1/21       optical    Duplex/full  100    down  down  down  none
+fei_1/22       optical    Duplex/full  100    down  down  down  none
+fei_1/23       optical    Duplex/full  100    down  down  down  none
+fei_1/24       optical    Duplex/full  100    up    down  down  NETTV_congtycoph
+gei_1/25       optical    Duplex/full  1000   up    down  down  none
+gei_1/26       optical    Duplex/full  1000   up    up    up    UP_DNG0140_p0/9
+smartgroup1                                   up    up    down  none
+DNG5031ASW09#
+
+@@BLOCK--

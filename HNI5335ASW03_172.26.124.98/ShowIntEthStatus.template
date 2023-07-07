@@ -1,0 +1,14 @@
+Value Int (\S+)
+Value LinkState (\w+)
+Value ProtocolState (\w+)
+Value Speed (\S+)
+Value Duplex (\S+)
+Value Vlan (\S+)
+Value Type (\S+)
+Value AliasName (\S+)
+
+Start 
+ ^${Int}\s+${LinkState}\W${ProtocolState}\s+${Speed}\s+${Duplex}\s+${Vlan}\s+${Type}\s+${AliasName} -> Record
+ ^${Int}\s+${LinkState}\W${ProtocolState}\s+${Speed}\s+${Duplex}\s+${Vlan}\s+${Type} -> Record
+
+

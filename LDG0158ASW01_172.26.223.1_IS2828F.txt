@@ -1,0 +1,74 @@
+@@BLOCK--
+LDG0158ASW01>enable
+Password:
+LDG0158ASW01#show interface port
+R: Receive Direction
+S: Send Direction
+Status: Forwarding status
+Port  Admin   Operate        Speed/Duplex  Flowctrl(R/S) Mac-learning Status    up-sta                   up-sustained
+--------------------------------------------------------------------------------------------------------------------------
+1     disable down           100M/full     off/off       enable       Forward
+2     disable down           100M/full     off/off       enable       Forward
+3     disable down           100M/full     off/off       enable       Forward
+4     disable down           100M/full     off/off       enable       Forward
+5     enable  down           100M/full     off/off       enable       Forward
+6     disable down           100M/full     off/off       enable       Forward
+7     enable  down           100M/full     off/off       enable       Forward
+8     enable  down           100M/full     off/off       enable       Forward
+9     enable  down           100M/full     off/off       enable       Forward
+10    disable down           100M/full     off/off       enable       Forward
+11    disable down           100M/full     off/off       enable       Forward
+12    disable down           100M/full     off/off       enable       Forward
+13    disable down           100M/full     off/off       enable       Forward
+14    enable  down           100M/full     off/off       enable       Forward
+15    disable down           100M/full     off/off       enable       Forward
+16    disable down           100M/full     off/off       enable       Forward
+17    enable  down           100M/full     off/off       enable       Forward
+18    enable  down           100M/full     off/off       enable       Forward
+19    disable down           100M/full     off/off       enable       Forward
+20    disable down           100M/full     off/off       enable       Forward
+21    disable down           100M/full     off/off       enable       Forward
+22    disable down           100M/full     off/off       enable       Forward
+23    disable down           100M/full     off/off       enable       Forward
+24    disable down           100M/full     off/off       enable       Forward
+25    disable down           auto          off/off       enable       Forward
+26    disable down           auto          off/off       enable       Forward
+27    disable down           auto          off/off       enable       Forward
+28    enable  up(1000M/full) 1000M/full    off/off       enable       Forward   Jan-01-2000 08:02:15 00y01m16d14h12m54s
+LDG0158ASW01#
+
+@@BLOCK--
+
+LDG0158ASW01#show inter port description
+Port    Description
+-------------------------------------
+1       port 1
+2       port 2
+3       port 3
+4       port 4
+5       l063_ftth_baotq1
+6       port 6
+7       l063_ftth_dangnh1
+8       l063_ftth_thanglv
+9       line_616541191
+10      port 10
+11      port 11
+12      port 12
+13      port 13
+14      l063_ftth_phongnt8
+15      port 15
+16      port 16
+17      l063_ftth_thuongnm1
+18      l063_ftth_thaontt6
+19      port 19
+20      port 20
+21      port 21
+22      port 22
+23      port 23
+24      port 24
+25      port 25
+26      port 26
+27      port 27
+28      UPLINK_LDG0158ASW01
+
+@@BLOCK--
