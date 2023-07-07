@@ -2,12 +2,13 @@ import textfsm as tf
 import xlsxwriter
 #from ExcelOpener import open_workbook
 #import ExcelOpener
-import os, sys
+#import os, sys
+import openpyxl
 
-script_dir = os.path.dirname( __file__ )
-mymodule_dir = os.path.join( script_dir, '..')
-sys.path.append( mymodule_dir )
-import ExcelOpener
+#script_dir = os.path.dirname( __file__ )
+#mymodule_dir = os.path.join( script_dir, '..')
+#sys.path.append( mymodule_dir )
+#import ExcelOpener
 
 
 def interface_name(name):
@@ -41,18 +42,25 @@ if (__name__ == '__main__'):
     deviceIP = deviceInfos[1]
     deviceModel = deviceInfos[2]
     
-    print("Device Name: " + deviceName)
-    print("Device IP: " + deviceIP)
-    print("Device Model: " + deviceModel)
+    #print("Device Name: " + deviceName)
+    #print("Device IP: " + deviceIP)
+    #print("Device Model: " + deviceModel)
 
-    workbook = ExcelOpener.open_workbook()
+    #workbook = ExcelOpener.open_workbook()
     #workbook.add_worksheet("ShowIntBrief")
-    worksheet = workbook.add_worksheet("ShowIntBrief")
+
+    workbook = openpyxl.load_workbook("..\DataCollection.xlsx")
+
+    sheetName = str(deviceName)
+    if (sheetName in workbook.sheetnames) == True:
+        workbook.remove(workbook[sheetName]) 
+    worksheet = workbook.create_sheet(sheetName)
+    #worksheet = workbook.add_worksheet("ShowIntBrief")
     #worksheet = workbook.get_worksheet_by_name("ShowIntBrief")
     title = ["Interface", "BandWidth(Mbits)", "AdminState", "PhysicalState", "ProtocolState", "Description"]
-    for col, res in enumerate(title):
-        worksheet.write(0, col, res)
-    row_num=1
+    for col, val in enumerate(title, start=1):
+        worksheet.cell(row=1, column=col).value = val
+    row_num=2
     for result in results:
         
         line = []
@@ -63,13 +71,14 @@ if (__name__ == '__main__'):
         line.append(str(result[4]))
         line.append(str(result[5]))
         
-        for col_num, res in enumerate(line):
-            worksheet.write(row_num, col_num, res)
+        for col_num, res in enumerate(line, start=1):
+            worksheet.cell(row_num, col_num).value=res
         row_num = row_num + 1
         
+    workbook.save("..\DataCollection.xlsx")
     workbook.close()
-    for result in results: 
-        print(result[0])
+    #for result in results: 
+    #    print(result[0])
 
         #print("\tInterface:", interface_name(result[0]))
         #print("\tBandwidth(Mbits):", result[1])
