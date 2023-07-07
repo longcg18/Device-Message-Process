@@ -1,0 +1,10 @@
+Value Int (\S+)
+Value LinkState (\S+)
+Value ActSpeed (\S+)
+Value ActDuplex (\S+)
+Value Pvid (\d+)
+Value Desc (\S+)
+
+Start
+ ^ ${Int}\s+\S+\s+${LinkState}\s+${ActSpeed}\s+${ActDuplex}\s+\S+\s+${Pvid}\s+${Desc} -> Record
+ ^ ${Int}\s+\S+\s+${LinkState}\s+${ActSpeed}\s+${ActDuplex}\s+\S+\s+${Pvid} -> Record
