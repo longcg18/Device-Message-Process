@@ -41,13 +41,6 @@ if (__name__ == '__main__'):
     deviceName = deviceInfos[0]
     deviceIP = deviceInfos[1]
     deviceModel = deviceInfos[2]
-    
-    #print("Device Name: " + deviceName)
-    #print("Device IP: " + deviceIP)
-    #print("Device Model: " + deviceModel)
-
-    #workbook = ExcelOpener.open_workbook()
-    #workbook.add_worksheet("ShowIntBrief")
 
     workbook = openpyxl.load_workbook("..\DataCollection.xlsx")
 
@@ -55,8 +48,6 @@ if (__name__ == '__main__'):
     if (sheetName in workbook.sheetnames) == True:
         workbook.remove(workbook[sheetName]) 
     worksheet = workbook.create_sheet(sheetName)
-    #worksheet = workbook.add_worksheet("ShowIntBrief")
-    #worksheet = workbook.get_worksheet_by_name("ShowIntBrief")
     title = ["Interface", "BandWidth(Mbits)", "AdminState", "PhysicalState", "ProtocolState", "Description"]
     for col, val in enumerate(title, start=1):
         worksheet.cell(row=1, column=col).value = val
