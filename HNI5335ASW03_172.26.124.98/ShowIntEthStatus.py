@@ -1,7 +1,5 @@
 import textfsm as tf
-import pandas as pd
 import openpyxl
-import xlsxwriter
 
 # for ReadLogFile Module
 import os, sys
@@ -10,23 +8,10 @@ mymodule_dir = os.path.join( script_dir, '..')
 sys.path.append( mymodule_dir )
 import ReadLogFile
 
+# standalize interface name
 def interface_name(name):
     ats = str(name)
     return ats.replace("FE", "FastEthernet").replace("G-", "Gigabit-")
-
-
-
-def read_data(fileName):
-    f = open(fileName, "r")
-
-
-    file_content = f.read()
-
-    start_index = file_content.find(start_marker) + len(start_marker)
-    end_index = file_content.find(end_marker, start_index)
-
-    relevant_data = file_content[start_index:end_index].strip()
-    return relevant_data
 
 if (__name__ == '__main__'):
     
@@ -58,7 +43,6 @@ if (__name__ == '__main__'):
         worksheet.cell(row=1, column=col).value = val
     row_num=2
     for result in results:
-        
         line = []
         line.append(str(interface_name(result[6]) + " " + result[0]))        
         line.append(str(result[1] + "/" + result[2]))        

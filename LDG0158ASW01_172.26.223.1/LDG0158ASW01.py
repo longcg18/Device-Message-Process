@@ -1,5 +1,6 @@
 import textfsm as tf
 import openpyxl
+
 import os, sys
 script_dir = os.path.dirname( __file__ )
 mymodule_dir = os.path.join( script_dir, '..')
