@@ -1,0 +1,9 @@
+Value Interface (\S+)
+Value AdminStatus (\w+)
+Value PhyStatus (\w+)
+Value Protocol (\w+)
+Value Description (\w+)
+Value DescriptionRest (\w*)
+
+Start
+ ^${Interface}\s+${AdminStatus}\s+${PhyStatus}\s+${Protocol}\s+${Description} -> Continue.Record
