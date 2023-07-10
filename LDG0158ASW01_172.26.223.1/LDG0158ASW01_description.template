@@ -1,0 +1,5 @@
+Value PortNumber (\S+)
+Value Description (.+)
+
+Start
+ ^${PortNumber}\s+${Description} -> Record

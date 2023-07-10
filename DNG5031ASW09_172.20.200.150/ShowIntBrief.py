@@ -2,13 +2,13 @@ import textfsm as tf
 import xlsxwriter
 #from ExcelOpener import open_workbook
 #import ExcelOpener
-#import os, sys
-import openpyxl
 
-#script_dir = os.path.dirname( __file__ )
-#mymodule_dir = os.path.join( script_dir, '..')
-#sys.path.append( mymodule_dir )
-#import ExcelOpener
+import openpyxl
+import os, sys
+script_dir = os.path.dirname( __file__ )
+mymodule_dir = os.path.join( script_dir, '..')
+sys.path.append( mymodule_dir )
+import ReadLogFile
 
 
 def interface_name(name):
@@ -30,18 +30,24 @@ def read_data(fileName):
 
 if (__name__ == '__main__'):
 
-    with open("ShowIntBrief.template") as tpl:
-        fsm = tf.TextFSM(tpl)
+    # Log file
     fileName = "DNG5031ASW09_172.20.200.150_3928A.txt"
-    relevant_data = read_data("DNG5031ASW09_172.20.200.150_3928A.txt")
-    results = fsm.ParseText(relevant_data)
-    #print(fsm.header)
-
     deviceInfos = fileName.split("_")
     deviceName = deviceInfos[0]
     deviceIP = deviceInfos[1]
     deviceModel = deviceInfos[2]
 
+    # Template
+    with open("ShowIntBrief.template") as tpl:
+        fsm = tf.TextFSM(tpl)
+    
+    # Read log file and Parse
+    start_marker = "@@BLOCK--"
+    end_marker = "@@BLOCK--"
+    relevant_data = ReadLogFile.read_data("DNG5031ASW09_172.20.200.150_3928A.txt", start_marker, end_marker)
+    results = fsm.ParseText(relevant_data)
+    
+    # Save results to DataCollection.xlsx
     workbook = openpyxl.load_workbook("..\DataCollection.xlsx")
 
     sheetName = str(deviceName)
@@ -68,12 +74,3 @@ if (__name__ == '__main__'):
         
     workbook.save("..\DataCollection.xlsx")
     workbook.close()
-    #for result in results: 
-    #    print(result[0])
-
-        #print("\tInterface:", interface_name(result[0]))
-        #print("\tBandwidth(Mbits):", result[1])
-        #print("\tAdminState:", result[2])
-        #print("\tPhysicalState:", result[3])
-        #print("\tProtocolState:", result[4])
-        #print("\tDescription:", result[5])
