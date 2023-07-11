@@ -38,13 +38,13 @@ if (__name__ == '__main__'):
     deviceModel = deviceInfos[2]
 
     # Template
-    with open("ShowIntBrief.template") as tpl:
+    with open("DNG5031ASW09.template") as tpl:
         fsm = tf.TextFSM(tpl)
     
     # Read log file and Parse
     start_marker = "@@BLOCK--"
     end_marker = "@@BLOCK--"
-    relevant_data = ReadLogFile.read_data("DNG5031ASW09_172.20.200.150_3928A.txt", start_marker, end_marker)
+    relevant_data = ReadLogFile.read_data(fileName, start_marker, end_marker)
     results = fsm.ParseText(relevant_data)
     
     # Save results to DataCollection.xlsx

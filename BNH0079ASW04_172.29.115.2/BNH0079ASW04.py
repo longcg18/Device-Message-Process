@@ -26,7 +26,7 @@ if (__name__ == '__main__'):
     end_marker = "@BLOCK--"
     relevant_data = ReadLogFile.read_data("BNH0079ASW04 _172.29.115.2_S3900.txt", start_marker, end_marker)
 
-    with open("DisplayBriefInt.template") as f:
+    with open("BNH0079ASW04.template") as f:
         interface_template = tf.TextFSM(f)
     results = interface_template.ParseText(relevant_data)
     
