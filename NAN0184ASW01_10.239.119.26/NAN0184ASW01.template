@@ -1,6 +1,5 @@
 Value Port (\S+)
 Value DescriptionStart (.+)
-Value DescriptionRest (.+)
 Value Link (\S+)
 Value Shutdown (\S+)
 Value Speed (\S+)
@@ -11,4 +10,4 @@ Value TagVlan (.+)
 Value UtVlan (\S+)
 
 Start
-  ^(${Port})\s+(${DescriptionStart}.*\n(?:\s{8}.+\n)*)?\s+(${Link})\s+(${Shutdown})\s+(${Speed})\s+(${Pri})\s+(${PVID})\s+(${Mode})\s+(${TagVlan})\s+(${UtVlan}) -> Record
+  ^(${Port})\s+${DescriptionStart}\s+(${Link})\s+(${Shutdown})\s+(${Speed})\s+(${Pri})\s+(${PVID})\s+(${Mode})\s+(${TagVlan})\s+(${UtVlan}) -> Record
