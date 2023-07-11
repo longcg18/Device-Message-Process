@@ -1,0 +1,5 @@
+Value Int (\S+)
+Value Description (\S+)
+
+Start
+ ^${Int}\s+\S+\s+\S+\s+${Description} -> Record
