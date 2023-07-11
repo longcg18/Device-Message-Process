@@ -1,0 +1,6 @@
+Value Interface (\S+)
+Value Status (\w+)
+Value Description (.+)
+
+Start
+ ^${Interface}\s+${Status}\s+${Description} -> Record

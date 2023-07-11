@@ -1,0 +1,11 @@
+@@BLOCK--
+
+<deviceName>show interface 
+Interface       Status              Description
+--------------------------------------------------------
+eth0/0/1        UP                  to_IT_mnger
+eth0/0/2        UP                  to_IT_dev
+ge0/0/1         DOWN                to_IT_tester
+
+
+@@BLOCK--
