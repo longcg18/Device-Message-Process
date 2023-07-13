@@ -8,8 +8,14 @@ mymodule_dir = os.path.join( script_dir, '..')
 sys.path.append( mymodule_dir )
 import ReadLogFile
 
-# Main 
 
+# Standalize interface name
+def interface_name(name):
+    ats = str(name)
+    ats = ats.replace("eth", "Ethernet")
+    return ats.replace("ge", "GigabitEthernet")
+
+# Main 
 if (__name__ == '__main__'):
     
     # Get device information
