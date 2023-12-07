@@ -1,5 +1,8 @@
-# Log get port 
- Get port information
+# Get Device Information
+- Interface
+- Port
+- Bandwidth
+- State
 
 ## Decribe: device log -> excel file
 
